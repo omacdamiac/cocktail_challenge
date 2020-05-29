@@ -19,9 +19,9 @@ export class ListComponent implements OnInit {
   myDrinks: iCocktail[];
   txtInput: any = '';
 
-  catFilter: iCategories = {strCategory: ''};
-  glaFilter: iGlasses = {strGlass: ''};
-  alcFilter: iAlcoholic = {strAlcoholic: ''};
+  catFilter: any = {strCategory: ''};
+  // glaFilter: iGlasses = {strGlass: ''};
+  // alcFilter: iAlcoholic = {strAlcoholic: ''};
 
   list:string = 'list';
   constructor(public _api: CocktailService, public filterPipe: FilterPipe){
