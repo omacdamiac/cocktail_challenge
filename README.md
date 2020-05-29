@@ -16,17 +16,14 @@ Contar con una conexión a internet.
 - npm install | `instalación de dependencias`
 - ng serve -o | `Ejecutar proyecto en el navegador`, `http://localhost:4200/`.
 
-## Archivo Google Lighthouse
-
-thecocktailBD_2020-05-29_04-46-14.html
-
 ## Dockerfile
 
 - `docker build -t cocktail .`
 - `docker run -it -p 8000:80 --name cocktaildocker cocktail`
 
+## Archivo Google Lighthouse
+thecocktailBD_2020-05-29_04-46-14.html
 # Mejoras
-
 - Implementar Loading en el inicio.
 - Cambio de `table` en moviles.
 
