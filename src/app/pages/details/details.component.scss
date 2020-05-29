@@ -1,0 +1,13 @@
+button {
+    background: transparent;
+    border: 0;
+    float: left;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none!important;
+}
+
+strong {
+    margin-right: 10px;
+}

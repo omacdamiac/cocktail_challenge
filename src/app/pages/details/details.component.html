@@ -1,0 +1,57 @@
+<div class="card mb-3" *ngFor="let m of myDrink">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <div class="text-center p-2">
+                <button title="List" routerLink="/lista">
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                </button>
+                <h5 class="card-title">{{ m.strDrink }}</h5>
+            </div>
+            <img src="{{ m.strDrinkThumb }}" class="card-img" alt="{{ m.strDrink }}">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <mat-list>
+                    <mat-list-item><strong>Categorie:</strong> {{ m.strCategory }}</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><strong>Alcoholic: </strong>{{ m.strAlcoholic }}</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><strong>Glass: </strong>{{ m.strGlass }}</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <p class="card-text">
+                            <small class="text-muted">
+                            <strong>Ingredient: </strong>
+                        <span *ngIf="m.strIngredient1">{{ m.strIngredient1 }}</span>
+                        <span *ngIf="m.strIngredient2">, {{ m.strIngredient2 }}</span>
+                        <span *ngIf="m.strIngredient3">, {{ m.strIngredient3 }}</span>
+                        <span *ngIf="m.strIngredient4">, {{ m.strIngredient4 }}</span>
+                        <span *ngIf="m.strIngredient5">, {{ m.strIngredient5 }}</span>
+                        <span *ngIf="m.strIngredient6">, {{ m.strIngredient6 }}</span>
+                        <span *ngIf="m.strIngredient7">, {{ m.strIngredient7 }}</span>
+                        <span *ngIf="m.strIngredient8">, {{ m.strIngredient8 }}</span>
+                        <span *ngIf="m.strIngredient9">, {{ m.strIngredient9 }}</span>
+                        <span *ngIf="m.strIngredient10">, {{ m.strIngredient10 }}</span>
+                        <span *ngIf="m.strIngredient11">, {{ m.strIngredient11 }}</span>
+                        <span *ngIf="m.strIngredient12">, {{ m.strIngredient12 }}</span>
+                        <span *ngIf="m.strIngredient13">, {{ m.strIngredient13 }}</span>
+                        <span *ngIf="m.strIngredient14">, {{ m.strIngredient14 }}</span>
+                        <span *ngIf="m.strIngredient15">, {{ m.strIngredient15 }}</span>.
+                        </small></p>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <mat-card-title>Instructions</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>{{ m.strInstructionsDE }} </p>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-list>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

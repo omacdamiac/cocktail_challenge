@@ -1,0 +1,86 @@
+<!-- hola: {{ myDrinks | json }} -->
+<div class="example-container">
+    <div class="card col-sm-4 col-12">
+        <div>
+            <mat-form-field>
+                <mat-label>Drink search</mat-label>
+                <input matInput [(ngModel)]="txtInput" (ngModelChange)="searchDrinks($event)" autocomplete="off" type="text">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <span class="mr-0 col-12 col-sm-2">Filtros :</span>
+
+    <!-- CmbCategorie -->
+    <mat-form-field class="col-12 col-sm-3">
+        <mat-label>Categories</mat-label>
+        <mat-select [(ngModel)]="catFilter.strCategory">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let option of optionsC" [value]="option.strCategory">
+                {{ option.strCategory }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- End CmbCategorie -->
+
+    <!-- cmbGlass -->
+    <mat-form-field class="col-12 col-sm-3">
+        <mat-label>Glasses</mat-label>
+        <mat-select [(ngModel)]="catFilter.strGlass">
+            <mat-option>None</mat-option>
+
+            <mat-option *ngFor="let option of optionsG" [value]="option.strGlass">
+                {{ option.strGlass }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- End cmbGlass -->
+
+    <!-- CmbAlcohol -->
+    <mat-form-field class="col-12 col-sm-3">
+        <mat-label>Alcoholic</mat-label>
+        <mat-select [(ngModel)]="catFilter.strAlcoholic">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let option of optionsA" [value]="option.strAlcoholic">
+                {{ option.strAlcoholic }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- End CmbAlcohol -->
+
+    <!-- Table Detalles -->
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="d-none d-sm-block">Id</th>
+                <th>Name</th>
+                <th>Categories</th>
+                <th>Glasses</th>
+                <th class="d-none d-sm-block">Ingredients</th>
+                <th>Alcoholic</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="list">
+            <tr *ngFor="let cup of myDrinks | filterBy: catFilter">
+                <td class="d-none d-sm-block">{{ cup.idDrink }}</td>
+                <td>
+                    <a routerLink="/detalle/{{ cup.idDrink }}">{{ cup.strDrink }}</a>
+                </td>
+                <td>{{ cup.strCategory }}</td>
+                <td>{{ cup.strGlass }}</td>
+                <td class="d-none d-sm-block">
+                    <ul>
+                        <li *ngIf="cup.strIngredient1">{{ cup.strIngredient1 }}</li>
+                        <li *ngIf="cup.strIngredient2">{{ cup.strIngredient2 }}</li>
+                        <li *ngIf="cup.strIngredient3">{{ cup.strIngredient3 }}</li>
+                        <li *ngIf="cup.strIngredient4">{{ cup.strIngredient4 }}</li>
+                        <li *ngIf="cup.strIngredient5">{{ cup.strIngredient5 }}</li>
+                    </ul>
+                </td>
+                <td>{{ cup.strAlcoholic }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- End Table Detalles -->
+
+</div>
