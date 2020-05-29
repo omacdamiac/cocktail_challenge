@@ -3,6 +3,7 @@ import { CocktailService } from "@services/cocktail.service";
 import { iCocktail, iCategories, iIngredient, iAlcoholic, iGlasses } from "@models/cocktail";
 import { FilterPipe } from "ngx-filter-pipe";
 import { HttpErrorResponse } from '@angular/common/http';
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
 @Component({
   selector: 'app-list',
@@ -29,10 +30,11 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getCategories();
-    this.getGlasses();
-    this.getIngredients();
-    this.getAlcoholic();
+    setTimeout(() => {
+      this.getCategories();
+      this.getGlasses();
+      this.getIngredients();
+      this.getAlcoholic();    }, 1000);
   } 
 
   getDrink(name: string){

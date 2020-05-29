@@ -17,7 +17,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
   ],
   exports:[
     HeaderComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    RouterModule
   ]
 })
 export class SharedModule { }

@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { FilterPipeModule } from "ngx-filter-pipe";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+
+//services
+import { CocktailService } from "@services/cocktail.service";
 
 //ROUTING CHILD
 import { PagesRoutingModule } from './pages-routing.module';
@@ -47,6 +51,9 @@ import { SharedModule } from '../shared/shared.module';
     HomeComponent,
     ListComponent,
     DetailsComponent,
-  ]
+  ],
+  providers:[CocktailService],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class PagesModule { }

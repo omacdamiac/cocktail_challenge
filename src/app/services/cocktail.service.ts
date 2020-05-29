@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 export class CocktailService {
   myDrink: any;
   url = environment.urlApi;;
-  constructor( public _http: HttpClient){}
+  constructor( private _http: HttpClient){}
 
   getAllDrinks(): Observable<iCocktail[]>{
     let url_api = `${this.url}search.php?s=Margarita`;
