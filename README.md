@@ -4,17 +4,17 @@
 
 # Construido con
 
-###[Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-###[Angular-Material](https://material.angular.io/components/categories)
-###[thecocktaildb.com](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
+- [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+- [Angular-Material](https://material.angular.io/components/categories)
+- [thecocktaildb.com](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
 
 # Comenzando
 
 Contar con una conexión a internet.
 
-git clone `https://github.com/omacdamiac/cocktail_challenge.git`.
-npm install | `instalación de dependencias`
-ng serve -o | `Ejecutar proyecto en el navegador`, `http://localhost:4200/`.
+- git clone `https://github.com/omacdamiac/cocktail_challenge.git`.
+- npm install | `instalación de dependencias`
+- ng serve -o | `Ejecutar proyecto en el navegador`, `http://localhost:4200/`.
 
 ## Archivo Google Lighthouse
 
@@ -22,8 +22,8 @@ thecocktailBD_2020-05-29_04-46-14.html
 
 ## Dockerfile
 
-`docker build -t cocktail .`
-`docker run -it -p 8000:80 --name cocktaildocker cocktail`
+- `docker build -t cocktail .`
+- `docker run -it -p 8000:80 --name cocktaildocker cocktail`
 
 # Mejoras
 
